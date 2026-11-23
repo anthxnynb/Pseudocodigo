@@ -1,0 +1,22 @@
+Algoritmo Polar_cartesiana
+    // Ejercicio: Conversión de coordenadas polares a cartesianas
+    // Fuente: ZIP original
+
+    // Variables y datos del problema
+    Definir R, G, RAD, X, Y Como Real
+
+    // Entrada de datos y validaciones
+    Escribir "Ingrese el radio:"
+    Leer R
+    Escribir "Ingrese el angulo en grados:"
+    Leer G
+
+    // Proceso y cálculos
+    RAD <- G * 3.14159265 / 180
+    X <- R * Cos(RAD)
+    Y <- R * Sen(RAD)
+
+    Escribir "Coordenada X: ", X
+    Escribir "Coordenada Y: ", Y
+FinAlgoritmo
+
