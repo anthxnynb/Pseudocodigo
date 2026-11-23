@@ -1,0 +1,28 @@
+Algoritmo Conversor_Unidades
+    // Ejercicio: Conversor de unidades simple
+    // Fuente: Semana 6, control múltiple
+
+    Definir O Como Entero
+    Definir V, R Como Real
+    Escribir "1. Km a m"
+    Escribir "2. m a cm"
+    Escribir "3. Horas a minutos"
+    Escribir "4. Salir"
+    Leer O
+    Si O >= 1 Y O <= 3 Entonces
+        Escribir "Ingrese el valor a convertir:"
+        Leer V
+        // Conversión por opción
+        Segun O Hacer
+            1: R <- V * 1000
+            2: R <- V * 100
+            3: R <- V * 60
+        FinSegun
+        Escribir "Resultado: ", R
+    SiNo
+        Segun O Hacer
+            4: Escribir "Fin del conversor"
+            De Otro Modo: Escribir "Opcion no valida"
+        FinSegun
+    FinSi
+FinAlgoritmo
