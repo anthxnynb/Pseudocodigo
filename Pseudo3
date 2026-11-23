@@ -1,0 +1,31 @@
+Algoritmo Acceso_Laboratorio
+    // Ejercicio: Acceso a laboratorio de cómputo
+    // Fuente: Semana 6, selección anidada
+
+    Definir E, C, A Como Caracter
+    // Datos de estudiante, carne y autorizacion
+    Escribir "Es estudiante? (S/N):"
+    Leer E
+    Escribir "Tiene carne vigente? (S/N):"
+    Leer C
+    Escribir "Tiene autorizacion especial? (S/N):"
+    Leer A
+    Si (E <> "S" Y E <> "N") O (C <> "S" Y C <> "N") O (A <> "S" Y A <> "N") Entonces
+        Escribir "Responda en mayusculas S o N"
+    SiNo
+        // Prioridad: estudiante con carne, o visitante autorizado
+        Si E = "S" Entonces
+            Si C = "S" Entonces
+                Escribir "Acceso permitido"
+            SiNo
+                Escribir "Acceso denegado: carne no vigente"
+            FinSi
+        SiNo
+            Si A = "S" Entonces
+                Escribir "Ingreso temporal autorizado"
+            SiNo
+                Escribir "Acceso denegado"
+            FinSi
+        FinSi
+    FinSi
+FinAlgoritmo
