@@ -1,0 +1,37 @@
+Algoritmo Tarifas_taxi
+    // Ejercicio: Sistema de tarifas de taxi
+    // Fuente: ZIP original
+
+    // Variables y datos del problema
+    Definir KM, TAR, TOT Como Real
+    Definir NOC Como Caracter
+
+    // Entrada de datos y validaciones
+    Escribir "Ingrese la distancia del viaje en km:"
+    Leer KM
+    // Proceso y cálculos
+    Mientras KM < 0 Hacer
+        Escribir "La distancia no puede ser negativa"
+        Escribir "Ingrese la distancia del viaje en km:"
+        Leer KM
+    FinMientras
+
+    Escribir "Es de noche? Ingrese S o N:"
+    Leer NOC
+    Mientras NOC <> "S" Y NOC <> "N" Hacer
+        Escribir "Debe ingresar S o N"
+        Escribir "Es de noche? Ingrese S o N:"
+        Leer NOC
+    FinMientras
+
+    TAR <- 2 + (1.5 * KM)
+    TOT <- TAR
+    Si KM > 10 Entonces
+        TOT <- TOT + (TOT * 0.20)
+    FinSi
+    Si NOC = "S" Entonces
+        TOT <- TOT + (TOT * 0.30)
+    FinSi
+
+    Escribir "Total a pagar: $", TOT
+FinAlgoritmo
