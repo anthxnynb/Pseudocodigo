@@ -1,0 +1,43 @@
+Algoritmo Estacion_del_anio
+    // Ejercicio: Determinación de estación del año
+    // Fuente: ZIP original
+
+    // Variables y datos del problema
+    Definir MES, DIA, DM Como Entero
+    Definir EST Como Caracter
+
+    // Entrada de datos y validaciones
+    Escribir "Ingrese el mes (1 a 12):"
+    Leer MES
+    Escribir "Ingrese el dia:"
+    Leer DIA
+
+    // Proceso y cálculos
+    DM <- 31
+    Si MES = 4 O MES = 6 O MES = 9 O MES = 11 Entonces
+        DM <- 30
+    SiNo
+        Si MES = 2 Entonces
+            DM <- 28
+        FinSi
+    FinSi
+
+    Si MES < 1 O MES > 12 O DIA < 1 O DIA > DM Entonces
+        Escribir "Fecha no valida"
+    SiNo
+        Si (MES = 12 Y DIA >= 21) O MES = 1 O MES = 2 O (MES = 3 Y DIA <= 20) Entonces
+            EST <- "Verano"
+        SiNo
+            Si (MES = 3 Y DIA >= 21) O MES = 4 O MES = 5 O (MES = 6 Y DIA <= 20) Entonces
+                EST <- "Otono"
+            SiNo
+                Si (MES = 6 Y DIA >= 21) O MES = 7 O MES = 8 O (MES = 9 Y DIA <= 22) Entonces
+                    EST <- "Invierno"
+                SiNo
+                    EST <- "Primavera"
+                FinSi
+            FinSi
+        FinSi
+        Escribir "La estacion del anio es: ", EST
+    FinSi
+FinAlgoritmo
