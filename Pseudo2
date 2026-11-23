@@ -1,0 +1,22 @@
+Algoritmo Clasificar_Temperatura
+    // Ejercicio: Clasificación de temperatura en Loja
+    // Fuente: Semana 6, selección anidada
+
+    Definir T Como Real
+    // Entrada
+    Escribir "Temperatura en grados Celsius:"
+    Leer T
+    // Clasificación con selección anidada
+    Si T < 15 Entonces
+        Escribir "Clima frio"
+    SiNo
+        Si T <= 25 Entonces
+            Escribir "Clima templado"
+        SiNo
+            Escribir "Clima calido"
+            Si T > 30 Entonces
+                Escribir "Alerta: calor extremo"
+            FinSi
+        FinSi
+    FinSi
+FinAlgoritmo
