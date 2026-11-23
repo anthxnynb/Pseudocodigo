@@ -1,0 +1,37 @@
+Algoritmo Descuento_Comercio_Cliente
+    // Caso adicional 1: Descuento segun el tipo de cliente
+    // Fuente: Seleccion Anidada y Switch ampliada, caso adicional 1
+
+    Definir C Como Entero
+    Definir M, D, F Como Real
+
+    Escribir "Tipo de cliente (1 = Estudiante, 2 = Empleado, 3 = General):"
+    Leer C
+    Escribir "Ingrese el monto de compra:"
+    Leer M
+
+    // Se acepta solamente un tipo valido y un monto positivo
+    Si C >= 1 Y C <= 3 Y M > 0 Entonces
+        // Descuento base mediante seleccion anidada
+        Si C = 1 Entonces
+            D <- 0.15
+        SiNo
+            Si C = 2 Entonces
+                D <- 0.10
+            SiNo
+                D <- 0
+            FinSi
+        FinSi
+
+        // Descuento adicional sobre el porcentaje inicial
+        Si M > 50 Entonces
+            D <- D + 0.05
+        FinSi
+
+        F <- M * (1 - D)
+        Escribir "Descuento aplicado: ", D * 100, "%"
+        Escribir "Total a pagar: $", F
+    SiNo
+        Escribir "Tipo de cliente o monto no valido"
+    FinSi
+FinAlgoritmo
