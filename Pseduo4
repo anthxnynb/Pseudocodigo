@@ -1,0 +1,35 @@
+Algoritmo Bono_Antiguedad
+    // Ejercicio: Bono por antigüedad y evaluación
+    // Fuente: Semana 6, selección anidada
+
+    Definir A, S, B, T Como Real
+    Definir E Como Caracter
+    // Entradas
+    Escribir "Antiguedad del trabajador en anos:"
+    Leer A
+    Escribir "Sueldo base:"
+    Leer S
+    Escribir "Evaluacion excelente? (S/N):"
+    Leer E
+    Si A < 0 O S < 0 O (E <> "S" Y E <> "N") Entonces
+        Escribir "Datos invalidos"
+    SiNo
+        // Nota: el enunciado no otorga bono justo a los 2 anos
+        B <- 0
+        Si A > 2 Entonces
+            B <- S * 0.10
+            Si E = "S" Entonces
+                B <- B + S * 0.05
+            FinSi
+        SiNo
+            Si A < 2 Entonces
+                Si E = "S" Entonces
+                    B <- S * 0.05
+                FinSi
+            FinSi
+        FinSi
+        T <- S + B
+        Escribir "Bono: $", B
+        Escribir "Sueldo total: $", T
+    FinSi
+FinAlgoritmo
