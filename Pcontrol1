@@ -1,0 +1,25 @@
+Algoritmo Menu_Cafeteria
+    // Ejercicio: Menú de cafetería UTPL
+    // Fuente: Semana 6, control múltiple
+
+    Definir O Como Entero
+    // Menú
+    Escribir "1. Cafe ($1.50)"
+    Escribir "2. Jugo ($1.20)"
+    Escribir "3. Sandwich ($2.50)"
+    Escribir "4. Salir"
+    Leer O
+    // Seleccion del producto
+    Segun O Hacer
+        1:
+            Escribir "Cafe: $1.50"
+        2:
+            Escribir "Jugo: $1.20"
+        3:
+            Escribir "Sandwich: $2.50"
+        4:
+            Escribir "Gracias por visitar la cafeteria"
+        De Otro Modo:
+            Escribir "Opcion no valida"
+    FinSegun
+FinAlgoritmo
