@@ -1,0 +1,40 @@
+Algoritmo Cuadrante
+    // Ejercicio: Determinación de cuadrante
+    // Fuente: ZIP original
+
+    // Variables y datos del problema
+    Definir X, Y Como Real
+
+    // Entrada de datos y validaciones
+    Escribir "Ingrese la coordenada X:"
+    Leer X
+    Escribir "Ingrese la coordenada Y:"
+    Leer Y
+
+    // Proceso y cálculos
+    Si X = 0 Y Y = 0 Entonces
+        Escribir "El punto esta en el origen"
+    SiNo
+        Si X = 0 Entonces
+            Escribir "El punto esta sobre el eje Y"
+        SiNo
+            Si Y = 0 Entonces
+                Escribir "El punto esta sobre el eje X"
+            SiNo
+                Si X > 0 Y Y > 0 Entonces
+                    Escribir "Primer cuadrante"
+                SiNo
+                    Si X < 0 Y Y > 0 Entonces
+                        Escribir "Segundo cuadrante"
+                    SiNo
+                        Si X < 0 Y Y < 0 Entonces
+                            Escribir "Tercer cuadrante"
+                        SiNo
+                            Escribir "Cuarto cuadrante"
+                        FinSi
+                    FinSi
+                FinSi
+            FinSi
+        FinSi
+    FinSi
+FinAlgoritmo
