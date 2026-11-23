@@ -1,0 +1,25 @@
+Algoritmo Menor_de_tres_numeros
+    // Ejercicio: pseudocódigo menor de tres numeros
+    // Fuente: ZIP original
+
+    // Variables y datos del problema
+    Definir N1, N2, N3, MEN Como Real
+    // Entrada de datos y validaciones
+    Escribir "Ingrese el primer numero:"
+    Leer N1
+    Escribir "Ingrese el segundo numero:"
+    Leer N2
+    Escribir "Ingrese el tercer numero:"
+    Leer N3
+    // Proceso y cálculos
+    Si N1 <= N2 Y N1 <= N3 Entonces
+        MEN <- N1
+    SiNo
+        Si N2 <= N1 Y N2 <= N3 Entonces
+            MEN <- N2
+        SiNo
+            MEN <- N3
+        FinSi
+    FinSi
+    Escribir "El menor de los tres numeros es: ", MEN
+FinAlgoritmo
