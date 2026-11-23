@@ -1,0 +1,27 @@
+Algoritmo Prestamo_Trimestral
+    // Ejercicio: Diagnóstico 1 - Préstamo con interés compuesto trimestral
+    // Fuente: Diagnóstico, ejercicio 1 (enunciado del chat)
+
+    Definir P, T, B, M, A, F Como Real
+    Definir N Como Entero
+    // Datos: prestamo, tasa trimestral decimal, periodos y porcentaje de abono
+    Escribir "Monto del prestamo:"
+    Leer P
+    Escribir "Tasa trimestral en decimal (ej. 0.03):"
+    Leer T
+    Escribir "Numero de trimestres:"
+    Leer N
+    Escribir "Porcentaje de abono extraordinario (0 a 100):"
+    Leer B
+    Si P <= 0 O T < 0 O N < 0 O B < 0 O B > 100 Entonces
+        Escribir "Datos invalidos"
+    SiNo
+        // Interes compuesto: monto = prestamo * (1 + tasa) ^ trimestres
+        M <- P * (1 + T) ^ N
+        A <- M * B / 100
+        F <- M - A
+        Escribir "Monto antes del abono: $", M
+        Escribir "Abono extraordinario: $", A
+        Escribir "Monto final a cancelar: $", F
+    FinSi
+FinAlgoritmo
