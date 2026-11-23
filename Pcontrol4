@@ -1,0 +1,18 @@
+Algoritmo Notas_Por_Letra
+    // Ejercicio: Clasificación de notas por letra
+    // Fuente: Semana 6, control múltiple
+
+    Definir L Como Caracter
+    Escribir "Letra de calificacion (A, B, C, D, F):"
+    Leer L
+    L <- Mayusculas(L)
+    // Correspondencia entre letra y rango
+    Segun L Hacer
+        "A": Escribir "Nota entre 9.0 y 10.0"
+        "B": Escribir "Nota entre 8.0 y 8.9"
+        "C": Escribir "Nota entre 7.0 y 7.9"
+        "D": Escribir "Nota entre 6.0 y 6.9"
+        "F": Escribir "Nota entre 0.0 y 5.9"
+        De Otro Modo: Escribir "Letra no valida"
+    FinSegun
+FinAlgoritmo
