@@ -1,0 +1,34 @@
+Algoritmo Dia_Semana_Actividad
+    // Ejercicio: Día de la semana y tipo de actividad
+    // Fuente: Semana 6, control múltiple; sustituye días del ZIP
+
+    Definir N Como Entero
+    Definir D, T Como Caracter
+    Definir V Como Logico
+    Escribir "Ingrese el dia (1 a 7):"
+    Leer N
+    // Un dia se muestra una sola vez, con tipo de actividad
+    V <- Verdadero
+    Segun N Hacer
+        1: D <- "Lunes"
+        2: D <- "Martes"
+        3: D <- "Miercoles"
+        4: D <- "Jueves"
+        5: D <- "Viernes"
+        6: D <- "Sabado"
+        7: D <- "Domingo"
+        De Otro Modo:
+            V <- Falso
+    FinSegun
+    Si V Entonces
+        Si N <= 5 Entonces
+            T <- "Dia de clases"
+        SiNo
+            T <- "Fin de semana"
+        FinSi
+        Escribir "Dia: ", D
+        Escribir "Actividad: ", T
+    SiNo
+        Escribir "Numero de dia no valido"
+    FinSi
+FinAlgoritmo
