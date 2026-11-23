@@ -1,0 +1,41 @@
+Algoritmo Descuento_compra
+    // Ejercicio: Descuento por volumen y cliente frecuente
+    // Fuente: ZIP original
+
+    // Variables y datos del problema
+    Definir M, P, D, T Como Real
+    Definir F Como Caracter
+
+    // Entrada de datos y validaciones
+    Escribir "Ingrese el monto de compra:"
+    Leer M
+    Escribir "Es cliente frecuente? (S/N):"
+    Leer F
+
+    // Proceso y cálculos
+    Si M < 0 O (F <> "S" Y F <> "s" Y F <> "N" Y F <> "n") Entonces
+        Escribir "Datos no validos"
+    SiNo
+        Si M >= 500 Entonces
+            P <- 15
+        SiNo
+            Si M >= 300 Entonces
+                P <- 10
+            SiNo
+                Si M >= 100 Entonces
+                    P <- 5
+                SiNo
+                    P <- 0
+                FinSi
+            FinSi
+        FinSi
+        Si F = "S" O F = "s" Entonces
+            P <- P + 5
+        FinSi
+        D <- M * P / 100
+        T <- M - D
+        Escribir "Porcentaje de descuento: ", P, "%"
+        Escribir "Descuento: $", D
+        Escribir "Total a pagar: $", T
+    FinSi
+FinAlgoritmo
