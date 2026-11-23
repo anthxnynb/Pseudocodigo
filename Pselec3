@@ -1,0 +1,34 @@
+Algoritmo Clasificar_estudiante
+    // Ejercicio: Clasificación por rendimiento y asistencia
+    // Fuente: ZIP original
+
+    // Variables y datos del problema
+    Definir P, A Como Real
+    Definir CAT Como Caracter
+
+    // Entrada de datos y validaciones
+    Escribir "Ingrese el promedio (0 a 10):"
+    Leer P
+    Escribir "Ingrese la asistencia (0 a 100):"
+    Leer A
+
+    // Proceso y cálculos
+    Si P < 0 O P > 10 O A < 0 O A > 100 Entonces
+        CAT <- "Datos no validos"
+    SiNo
+        Si P >= 9 Y A >= 90 Entonces
+            CAT <- "Excelente"
+        SiNo
+            Si P >= 7 Y A >= 80 Entonces
+                CAT <- "Bueno"
+            SiNo
+                Si P >= 6 Y A >= 70 Entonces
+                    CAT <- "Regular"
+                SiNo
+                    CAT <- "Deficiente"
+                FinSi
+            FinSi
+        FinSi
+    FinSi
+    Escribir "Categoria: ", CAT
+FinAlgoritmo
