@@ -1,0 +1,46 @@
+Algoritmo Bono_productividad
+    // Ejercicio: Bono por productividad
+    // Fuente: ZIP original
+
+    // Variables y datos del problema
+    Definir SB, PRO, PB, BONO, TOT Como Real
+
+    // Entrada de datos y validaciones
+    Escribir "Ingrese el sueldo base:"
+    Leer SB
+    // Proceso y cálculos
+    Mientras SB < 0 Hacer
+        Escribir "El sueldo base no puede ser negativo"
+        Escribir "Ingrese el sueldo base:"
+        Leer SB
+    FinMientras
+
+    Escribir "Ingrese el porcentaje de productividad (0 a 100):"
+    Leer PRO
+    Mientras PRO < 0 O PRO > 100 Hacer
+        Escribir "La productividad debe estar entre 0 y 100"
+        Escribir "Ingrese el porcentaje de productividad (0 a 100):"
+        Leer PRO
+    FinMientras
+
+    Si PRO >= 90 Entonces
+        PB <- 20
+    SiNo
+        Si PRO >= 70 Entonces
+            PB <- 10
+        SiNo
+            Si PRO >= 50 Entonces
+                PB <- 5
+            SiNo
+                PB <- 0
+            FinSi
+        FinSi
+    FinSi
+
+    BONO <- SB * (PB / 100)
+    TOT <- SB + BONO
+
+    Escribir "Porcentaje de bono aplicado: ", PB, "%"
+    Escribir "Bono: $", BONO
+    Escribir "Total a pagar: $", TOT
+FinAlgoritmo
