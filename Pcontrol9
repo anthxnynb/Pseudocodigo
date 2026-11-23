@@ -1,0 +1,37 @@
+Algoritmo Conversor_Monedas_Comision
+    // Ejercicio: Conversor de monedas con comisión
+    // Fuente: Problemas Switch/Match, problema 4
+
+    Definir O Como Entero
+    Definir M, T, C, CU, CD, R Como Real
+    // Tasas didacticas de la diapositiva, NO cotizaciones actuales
+    Escribir "Moneda: 1 EUR, 2 GBP, 3 JPY, 4 MXN"
+    Leer O
+    Escribir "Monto en USD:"
+    Leer M
+    Si M < 0 O O < 1 O O > 4 Entonces
+        Escribir "Datos invalidos"
+    SiNo
+        // Tasa y comision por tipo
+        Segun O Hacer
+            1:
+                T <- 0.92
+                C <- 0.01
+            2:
+                T <- 0.78
+                C <- 0.01
+            3:
+                T <- 149
+                C <- 0.015
+            4:
+                T <- 17.2
+                C <- 0.02
+        FinSegun
+        CU <- M * C
+        CD <- CU * T
+        R <- M * T - CD
+        Escribir "Comision en USD: $", CU
+        Escribir "Comision en moneda destino: ", CD
+        Escribir "Monto convertido neto: ", R
+    FinSi
+FinAlgoritmo
