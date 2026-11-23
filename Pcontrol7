@@ -1,0 +1,39 @@
+Algoritmo Descuento_Categoria
+    // Ejercicio: Descuentos por categoría y volumen
+    // Fuente: Problemas Switch/Match, problema 2
+
+    Definir O, C Como Entero
+    Definir P, D, T Como Real
+    // Categoria, cantidad y precio unitario
+    Escribir "Categoria: 1 Electronica, 2 Ropa, 3 Alimentos, 4 Otros"
+    Leer O
+    Escribir "Cantidad:"
+    Leer C
+    Escribir "Precio unitario:"
+    Leer P
+    Si C <= 0 O P < 0 O O < 1 O O > 4 Entonces
+        Escribir "Datos invalidos"
+    SiNo
+        // Descuento segun categoria y volumen
+        D <- 0
+        Segun O Hacer
+            1:
+                Si C >= 10 Entonces
+                    D <- 0.05
+                FinSi
+            2:
+                Si C >= 5 Entonces
+                    D <- 0.10
+                FinSi
+            3:
+                D <- 0.03
+            4:
+                D <- 0
+        FinSegun
+        T <- P * C * (1 - D)
+        Si T > 100 Entonces
+            T <- T * 0.98
+        FinSi
+        Escribir "Total a pagar: $", T
+    FinSi
+FinAlgoritmo
