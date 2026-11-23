@@ -1,0 +1,31 @@
+Algoritmo Descuento_Libreria
+    // Ejercicio: Descuento en librería de Loja
+    // Fuente: Semana 6, selección anidada
+
+    // Entrada y validación
+    Definir E Como Caracter
+    Definir M, D, T Como Real
+    Escribir "Es estudiante UTPL? (S/N):"
+    Leer E
+    Escribir "Monto de compra:"
+    Leer M
+    Si M < 0 O (E <> "S" Y E <> "N" Y E <> "s" Y E <> "n") Entonces
+        Escribir "Datos invalidos"
+    SiNo
+        // Descuentos por tipo de cliente
+        D <- 0
+        Si E = "S" O E = "s" Entonces
+            D <- 20
+            Si M > 30 Entonces
+                D <- D + 5
+            FinSi
+        SiNo
+            Si M > 50 Entonces
+                D <- 10
+            FinSi
+        FinSi
+        T <- M * (1 - D / 100)
+        Escribir "Descuento aplicado: ", D, "%"
+        Escribir "Total a pagar: $", T
+    FinSi
+FinAlgoritmo
