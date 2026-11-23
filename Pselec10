@@ -1,0 +1,37 @@
+Algoritmo Horas_de_trabajo
+    // Ejercicio: pseudocódigo Horas de trabajo
+    // Fuente: ZIP original
+
+    // Variables y datos del problema
+   Definir H, HE, SXH, S1, S2, SF Como Real
+    // Entrada de datos y validaciones
+   Escribir "Ingrese las horas trabajadas"
+   Leer H
+   Escribir "Ingrese el sueldo por hora trabajada"
+   Leer SXH
+    // Proceso y cálculos
+   HE <- 0
+// Horas trabajadas
+   Mientras H <= 0 O H > 168 Hacer
+      Escribir "El numero ingresado debe ser mayor que 0 y menor o igual a 168 horas"
+      Escribir "Ingrese las horas trabajadas"
+      Leer H
+   FinMientras
+// Sueldo por hora
+   Mientras SXH <= 0 Hacer
+      Escribir "El sueldo por hora debe ser mayor que 0"
+      Escribir "Ingrese el sueldo por hora trabajada"
+      Leer SXH
+   FinMientras
+// Horas extras
+   Si H <= 40 Entonces
+      SF <- H * SXH
+   Sino
+      HE <- H - 40
+      S1 <- 40 * SXH
+      S2 <- HE * (SXH * 2)
+      SF <- S1 + S2
+   FinSi
+   Escribir "Las horas extras trabajadas son: ", HE
+   Escribir "El sueldo semanal es: ", SF
+FinAlgoritmo
