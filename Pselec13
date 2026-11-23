@@ -1,0 +1,41 @@
+Algoritmo Promedio_Tres_Tareas
+    // Ejercicio: pseudocódigo Promedio de tres tareas
+    // Fuente: ZIP original
+
+    // Variables y datos del problema
+  Definir N1, N2, N3, P como real
+// Ingreso y verificacion de la nota uno
+    // Entrada de datos y validaciones
+  Escribir "Ingrese nota parcial 1"
+   Leer N1
+    // Proceso y cálculos
+  Mientras N1 < 0 o N1 > 10 hacer
+   Escribir "La nota no puede menor que 0 ni mayor a 10"
+   Escribir "Ingrese nota parcial 1"
+   Leer N1
+  FinMientras
+// Ingreso y verificacion de la nota dos
+  Escribir "Ingrese nota parcial 2"
+   Leer N2
+  Mientras N2 < 0 o N2 > 10 hacer
+   Escribir "La nota no puede menor que 0 ni mayor a 10"
+   Escribir "Ingrese nota parcial 2"
+   Leer N2
+  FinMientras
+// Ingreso y verificacion de la nota tres
+  Escribir "Ingrese nota parcial 3"
+   Leer N3
+  Mientras N3 < 0 o N3 > 10 hacer
+   Escribir "La nota no puede menor que 0 ni mayor a 10"
+   Escribir "Ingrese nota parcial 3"
+   Leer N3
+  FinMientras
+//Calculo del promedio
+   P <- (N1+N2+N3)/3
+  Si P >= 7 entonces
+   Escribir "El estudiante aprueba y su promedio es:", P
+  Sino
+
+   Escribir "El estudiante no aprueba y su promedio es:", P
+  FinSi
+FinAlgoritmo
