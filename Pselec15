@@ -1,0 +1,30 @@
+Algoritmo Tarifa_estacionamiento
+    // Ejercicio: Tarifa de estacionamiento con recargo nocturno
+    // Fuente: ZIP original
+
+    // Variables y datos del problema
+    Definir H, TB, T Como Real
+    Definir N Como Caracter
+
+    // Entrada de datos y validaciones
+    Escribir "Ingrese las horas de estacionamiento:"
+    Leer H
+    Escribir "Es horario nocturno? (S/N):"
+    Leer N
+
+    // Proceso y cálculos
+    Si H < 0 O (N <> "S" Y N <> "s" Y N <> "N" Y N <> "n") Entonces
+        Escribir "Datos no validos"
+    SiNo
+        TB <- H * 1.50
+        T <- TB
+        Si H > 8 Entonces
+            T <- T * 1.25
+        FinSi
+        Si N = "S" O N = "s" Entonces
+            T <- T * 1.30
+        FinSi
+        Escribir "Tarifa base: $", TB
+        Escribir "Total a pagar: $", T
+    FinSi
+FinAlgoritmo
