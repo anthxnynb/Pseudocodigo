@@ -1,0 +1,42 @@
+Algoritmo Impuesto_Contribuyente
+    // Ejercicio: Impuestos por tipo de contribuyente
+    // Fuente: Problemas Switch/Match, problema 1
+
+    Definir O Como Entero
+    Definir I, T Como Real
+    Definir V Como Logico
+    // Datos de ingreso anual
+    Escribir "Tipo: 1 Estudiante, 2 Independiente, 3 Empleado, 4 Empresa"
+    Leer O
+    Escribir "Ingreso anual:"
+    Leer I
+    V <- Verdadero
+    T <- 0
+    Si I < 0 Entonces
+        Escribir "Ingreso no valido"
+    SiNo
+        // Impuesto por categoria, incluyendo recargo si procede
+        Segun O Hacer
+            1:
+                Si I >= 5000 Entonces
+                    T <- I * 0.05
+                FinSi
+            2:
+                T <- I * 0.10
+            3:
+                T <- I * 0.12
+                Si I > 20000 Entonces
+                    T <- T + I * 0.02
+                FinSi
+            4:
+                T <- I * 0.15
+            De Otro Modo:
+                V <- Falso
+        FinSegun
+        Si V Entonces
+            Escribir "Impuesto anual: $", T
+        SiNo
+            Escribir "Tipo invalido"
+        FinSi
+    FinSi
+FinAlgoritmo
