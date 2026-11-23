@@ -1,0 +1,40 @@
+Algoritmo Clasificacion_triangulo
+    // Ejercicio: Clasificación de triángulo por ángulos
+    // Fuente: ZIP original
+
+    // Variables y datos del problema
+    Definir A1, A2, A3, SUMA, MAY Como Real
+
+    // Entrada de datos y validaciones
+    Escribir "Ingrese el primer angulo:"
+    Leer A1
+    Escribir "Ingrese el segundo angulo:"
+    Leer A2
+    Escribir "Ingrese el tercer angulo:"
+    Leer A3
+
+    // Proceso y cálculos
+    SUMA <- A1 + A2 + A3
+
+    Si A1 <= 0 O A2 <= 0 O A3 <= 0 O SUMA <> 180 Entonces
+        Escribir "Error: los angulos no forman un triangulo"
+    SiNo
+        MAY <- A1
+        Si A2 > MAY Entonces
+            MAY <- A2
+        FinSi
+        Si A3 > MAY Entonces
+            MAY <- A3
+        FinSi
+
+        Si MAY < 90 Entonces
+            Escribir "El triangulo es acutangulo"
+        SiNo
+            Si MAY = 90 Entonces
+                Escribir "El triangulo es rectangulo"
+            SiNo
+                Escribir "El triangulo es obtusangulo"
+            FinSi
+        FinSi
+    FinSi
+FinAlgoritmo
