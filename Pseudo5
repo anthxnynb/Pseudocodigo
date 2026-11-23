@@ -1,0 +1,29 @@
+Algoritmo Tarifa_Parqueadero
+    // Ejercicio: Tarifa de parqueadero de estudiantes
+    // Fuente: Semana 6, selección anidada
+
+    Definir H, T Como Real
+    Definir E Como Caracter
+    // Datos
+    Escribir "Horas de permanencia:"
+    Leer H
+    Escribir "Es estudiante UTPL? (S/N):"
+    Leer E
+    Si H < 0 O (E <> "S" Y E <> "N") Entonces
+        Escribir "Datos invalidos"
+    SiNo
+        // Tarifa base: un dolar por hora
+        T <- H * 1
+        Si E = "S" Entonces
+            T <- T * 0.50
+            Si H > 4 Entonces
+                T <- T * 1.20
+            FinSi
+        SiNo
+            Si H > 6 Entonces
+                T <- T * 1.20
+            FinSi
+        FinSi
+        Escribir "Total a pagar: $", T
+    FinSi
+FinAlgoritmo
