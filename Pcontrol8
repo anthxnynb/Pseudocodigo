@@ -1,0 +1,35 @@
+Algoritmo Nivel_Academico
+    // Ejercicio: Nivel académico y recomendación
+    // Fuente: Problemas Switch/Match, problema 3
+
+    Definir P Como Real
+    Definir R, N Como Entero
+    Escribir "Promedio de 0 a 10:"
+    Leer P
+    Escribir "Materias reprobadas:"
+    Leer R
+    Si P < 0 O P > 10 O R < 0 Entonces
+        Escribir "Datos invalidos"
+    SiNo
+        // Primero se determina el nivel
+        N <- 4
+        Si P >= 9 Y R = 0 Entonces
+            N <- 1
+        SiNo
+            Si P >= 8 Y R <= 1 Entonces
+                N <- 2
+            SiNo
+                Si P >= 7 Entonces
+                    N <- 3
+                FinSi
+            FinSi
+        FinSi
+        // Luego se presenta la recomendacion
+        Segun N Hacer
+            1: Escribir "Excelente - Continua asi"
+            2: Escribir "Bueno - Refuerza debilidades"
+            3: Escribir "Regular - Necesitas mas estudio"
+            4: Escribir "En riesgo - Busca tutoria"
+        FinSegun
+    FinSi
+FinAlgoritmo
