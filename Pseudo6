@@ -1,0 +1,37 @@
+Algoritmo Descuento_Transporte_Loja
+    // Ejemplo: Descuento de transporte urbano en Loja
+    // Fuente: Seleccion Anidada y Switch ampliada, ejemplo anidado 1
+
+    Definir E, H Como Entero
+    Definir T, D, F Como Real
+
+    // Ingreso de datos
+    Escribir "Es estudiante? (1 = Si, 0 = No):"
+    Leer E
+    Escribir "Ingrese la hora del viaje (0 a 23):"
+    Leer H
+    Escribir "Ingrese la tarifa base:"
+    Leer T
+
+    // Verificar los datos antes de calcular
+    Si (E = 0 O E = 1) Y (H >= 0 Y H <= 23) Y T >= 0 Entonces
+        D <- 0
+        // Seleccion anidada por tipo de pasajero y horario
+        Si E = 1 Entonces
+            D <- 0.30
+            Si H >= 9 Y H <= 16 Entonces
+                D <- D + 0.10
+            FinSi
+        SiNo
+            Si H >= 9 Y H <= 16 Entonces
+                D <- 0.10
+            FinSi
+        FinSi
+
+        F <- T * (1 - D)
+        Escribir "Descuento aplicado: ", D * 100, "%"
+        Escribir "Tarifa final: $", F
+    SiNo
+        Escribir "Datos no validos"
+    FinSi
+FinAlgoritmo
