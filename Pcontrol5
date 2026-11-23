@@ -1,0 +1,34 @@
+Algoritmo Transporte_Loja
+    // Ejercicio: Medios de transporte en Loja
+    // Fuente: Semana 6, control múltiple
+
+    Definir O, T Como Entero
+    Definir C Como Caracter
+    // Tiempos referenciales para 5 km; varian con trafico y terreno
+    Escribir "1. Bus urbano"
+    Escribir "2. Taxi"
+    Escribir "3. Bicicleta"
+    Escribir "4. Caminar"
+    Leer O
+    Segun O Hacer
+        1:
+            T <- 30
+            C <- "Economico, depende de las paradas"
+        2:
+            T <- 15
+            C <- "Comodo, sujeto al trafico"
+        3:
+            T <- 25
+            C <- "Activo y sin combustible"
+        4:
+            T <- 60
+            C <- "Saludable, requiere mas tiempo"
+        De Otro Modo:
+            T <- -1
+            C <- "Opcion no valida"
+    FinSegun
+    Si T >= 0 Entonces
+        Escribir "Tiempo aproximado: ", T, " minutos"
+    FinSi
+    Escribir C
+FinAlgoritmo
