@@ -1,0 +1,31 @@
+Algoritmo Tipo_ecuacion
+    // Ejercicio: Tipo de ecuación cuadrática
+    // Fuente: ZIP original
+
+    // Variables y datos del problema
+    Definir A, B, C, D Como Real
+
+    // Entrada de datos y validaciones
+    Escribir "Ingrese el coeficiente A:"
+    Leer A
+    Escribir "Ingrese el coeficiente B:"
+    Leer B
+    Escribir "Ingrese el coeficiente C:"
+    Leer C
+
+    // Proceso y cálculos
+    Si A = 0 Entonces
+        Escribir "No es una ecuacion cuadratica"
+    SiNo
+        D <- B ^ 2 - 4 * A * C
+        Si D > 0 Entonces
+            Escribir "Tiene dos soluciones reales"
+        SiNo
+            Si D = 0 Entonces
+                Escribir "Tiene una solucion real"
+            SiNo
+                Escribir "No tiene soluciones reales"
+            FinSi
+        FinSi
+    FinSi
+FinAlgoritmo
