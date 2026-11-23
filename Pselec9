@@ -1,0 +1,30 @@
+Algoritmo Descuento_segun_compra
+    // Ejercicio: pseudocódigo Descuento según monto de compra
+    // Fuente: ZIP original
+
+    // Variables y datos del problema
+    Definir C, P, P1, D, PF Como Real
+    // Entrada de datos y validaciones
+    Escribir "Ingrese el monto de la compra:"
+    Leer C
+    // Proceso y cálculos
+    Mientras C < 0 Hacer
+        Escribir "El monto no puede ser negativo"
+        Escribir "Ingrese el monto de la compra:"
+        Leer C
+    FinMientras
+    Si C >= 200 Entonces
+        P <- 0.15
+    SiNo
+        Si C >= 100 Entonces
+            P <- 0.10
+        SiNo
+            P <- 0.05
+        FinSi
+    FinSi
+    D <- C * P
+    P1 <- P * 100
+    PF <- C - D
+    Escribir "Descuento aplicado: ", P1 ,"%"
+    Escribir "Monto a pagar: $", PF
+FinAlgoritmo
